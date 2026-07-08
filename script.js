@@ -1,84 +1,44 @@
-// ==========================================
-// URL DO GOOGLE APPS SCRIPT
-// (Será substituída depois)
-// ==========================================
-
 const URL_SCRIPT = "https://script.google.com/macros/s/AKfycbydaiqrE6s8hY0RB-vK5-KJU0gy3905yox6Alhfi6nthaCB5jOOJGm6pAfYbOfBQOM/exec";
 
-
-// ==========================================
-// FORMULÁRIO
-// ==========================================
-
 const formulario = document.getElementById("formulario");
-
 const mensagem = document.getElementById("mensagem");
 
-
-// ==========================================
-// ENVIO
-// ==========================================
-
-formulario.addEventListener("submit", async function(e){
+formulario.addEventListener("submit", function(e){
 
     e.preventDefault();
 
-    const nome = document.getElementById("nome").value.trim();
+    mensagem.innerHTML="Enviando confirmação...";
 
-    const convidados = document.getElementById("convidados").value.trim();
+    const dados = new FormData();
 
-    if(nome===""){
+    dados.append("nome",document.getElementById("nome").value);
 
-        alert("Informe seu nome.");
+    dados.append("convidados",document.getElementById("convidados").value);
 
-        return;
+    fetch(URL_SCRIPT,{
 
-    }
+        method:"POST",
 
-    mensagem.innerHTML = "Enviando confirmação...";
+        body:dados
 
-    try{
+    })
 
-        const resposta = await fetch(URL_SCRIPT,{
+    .then(res=>res.text())
 
-            method:"POST",
+    .then(res=>{
 
-            headers:{
-                "Content-Type":"application/json"
-            },
+        mensagem.innerHTML="✅ Presença confirmada!";
 
-            body:JSON.stringify({
+        formulario.reset();
 
-                nome:nome,
+    })
 
-                convidados:convidados
+    .catch(err=>{
 
-            })
+        console.log(err);
 
-        });
+        mensagem.innerHTML="❌ Erro ao confirmar.";
 
-        const resultado = await resposta.json();
-
-        if(resultado.status==="sucesso"){
-
-            mensagem.innerHTML="✅ Presença confirmada com sucesso!";
-
-            formulario.reset();
-
-        }else{
-
-            mensagem.innerHTML="❌ Ocorreu um erro. Tente novamente.";
-
-        }
-
-    }
-
-    catch(erro){
-
-        console.error(erro);
-
-        mensagem.innerHTML="❌ Não foi possível enviar sua confirmação.";
-
-    }
+    });
 
 });
