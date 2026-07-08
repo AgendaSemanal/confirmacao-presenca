@@ -22,7 +22,7 @@ body{
 
     align-items:center;
 
-    padding:40px;
+    padding:15px;
 
     position:relative;
 
@@ -145,15 +145,15 @@ body::before{
 
     width:100%;
 
-    max-width:700px;
+    max-width:430px;
 
     background:rgba(16,35,70,.94);
 
     border:1px solid rgba(212,175,55,.35);
 
-    border-radius:20px;
+    border-radius:18px;
 
-    padding:50px;
+    padding:22px;
 
     text-align:center;
 
@@ -171,9 +171,9 @@ body::before{
 
 .logo img{
 
-    width:85px;
+    width:60px;
 
-    margin-bottom:25px;
+    margin-bottom:12px;
 
 }
 
@@ -185,11 +185,13 @@ body::before{
 
     color:#D4AF37;
 
-    font-size:60px;
+    font-size:42px;
 
-    letter-spacing:4px;
+    letter-spacing:2px;
 
     font-weight:400;
+
+    line-height:1;
 
 }
 
@@ -199,13 +201,15 @@ body::before{
 
     color:#ffffff;
 
-    letter-spacing:10px;
+    letter-spacing:5px;
 
-    font-size:30px;
+    font-size:20px;
 
     font-weight:400;
 
-    margin-top:-8px;
+    margin-top:-2px;
+
+    line-height:1;
 
 }
 
@@ -213,11 +217,11 @@ body::before{
 
 .linha{
 
-    width:220px;
+    width:160px;
 
     height:2px;
 
-    margin:25px auto;
+    margin:14px auto;
 
     background:linear-gradient(to right,
     transparent,
@@ -256,9 +260,9 @@ body::before{
 
     color:#E9D39A;
 
-    margin-bottom:8px;
+    margin-bottom:3px;
 
-    font-size:17px;
+    font-size:14px;
 
 }
 
@@ -268,11 +272,13 @@ h3{
 
     color:#D4AF37;
 
-    font-size:46px;
+    font-size:34px;
 
-    letter-spacing:3px;
+    letter-spacing:2px;
 
     font-weight:400;
+
+    line-height:1;
 
 }
 
@@ -280,13 +286,13 @@ span{
 
     display:block;
 
-    margin-top:5px;
+    margin-top:2px;
 
     color:white;
 
-    letter-spacing:2px;
+    letter-spacing:1px;
 
-    font-size:15px;
+    font-size:13px;
 
 }
 
@@ -294,13 +300,13 @@ span{
 
 .texto{
 
-    margin:35px 0;
+    margin:18px 0;
 
-    line-height:1.8;
+    line-height:1.4;
 
     color:#efefef;
 
-    font-size:15px;
+    font-size:14px;
 
 }
 
@@ -308,7 +314,7 @@ span{
 
 .campo{
 
-    margin-bottom:25px;
+    margin-bottom:15px;
 
     text-align:left;
 
@@ -318,7 +324,7 @@ label{
 
     display:block;
 
-    margin-bottom:10px;
+    margin-bottom:5px;
 
     color:#D4AF37;
 
@@ -326,15 +332,17 @@ label{
 
     letter-spacing:1px;
 
+    font-size:14px;
+
 }
 
 input,textarea{
 
     width:100%;
 
-    padding:15px;
+    padding:11px 14px;
 
-    border-radius:10px;
+    border-radius:8px;
 
     border:1px solid rgba(212,175,55,.45);
 
@@ -342,7 +350,7 @@ input,textarea{
 
     color:white;
 
-    font-size:15px;
+    font-size:14px;
 
     font-family:Montserrat;
 
@@ -367,11 +375,11 @@ button{
 
     width:100%;
 
-    padding:18px;
+    padding:14px;
 
     border:none;
 
-    border-radius:50px;
+    border-radius:40px;
 
     background:linear-gradient(90deg,#B8860B,#D4AF37,#E7C766);
 
@@ -379,9 +387,9 @@ button{
 
     font-family:'Bebas Neue';
 
-    font-size:24px;
+    font-size:20px;
 
-    letter-spacing:2px;
+    letter-spacing:1px;
 
     cursor:pointer;
 
@@ -401,9 +409,9 @@ button:hover{
 
 #mensagem{
 
-    margin-top:30px;
+    margin-top:15px;
 
-    font-size:18px;
+    font-size:15px;
 
     color:#D4AF37;
 
@@ -415,27 +423,63 @@ button:hover{
 
 @media(max-width:700px){
 
+body{
+
+    padding:10px;
+
+}
+
 .container{
 
-padding:30px;
+    max-width:380px;
+
+    padding:18px;
+
+}
+
+.logo img{
+
+    width:52px;
+
+    margin-bottom:10px;
 
 }
 
 .titulo h1{
 
-font-size:46px;
+    font-size:36px;
+
+}
+
+.titulo h2{
+
+    font-size:18px;
 
 }
 
 h3{
 
-font-size:34px;
+    font-size:30px;
+
+}
+
+.texto{
+
+    margin:15px 0;
 
 }
 
 button{
 
-font-size:20px;
+    font-size:18px;
+
+    padding:12px;
+
+}
+
+textarea{
+
+    min-height:75px;
 
 }
 
