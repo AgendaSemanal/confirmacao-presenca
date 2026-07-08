@@ -3,7 +3,7 @@
 // (Será substituída depois)
 // ==========================================
 
-const URL_SCRIPT = "COLE_AQUI_A_URL_DO_APPS_SCRIPT";
+const URL_SCRIPT = "https://script.google.com/macros/s/AKfycbydaiqrE6s8hY0RB-vK5-KJU0gy3905yox6Alhfi6nthaCB5jOOJGm6pAfYbOfBQOM/exec";
 
 
 // ==========================================
