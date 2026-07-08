@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Confirmação de Presença</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="background-top"></div>
+<div class="background-bottom"></div>
+
+<div class="container">
+
+    <div class="logo">
+
+        <!-- Troque depois pela logo do coração -->
+        <img src="logo.png" alt="Logo">
+
+    </div>
+
+    <div class="titulo">
+
+        <h1>CONFIRMAÇÃO</h1>
+        <h2>DE PRESENÇA</h2>
+
+    </div>
+
+    <div class="linha"></div>
+
+    <p class="subtitulo">
+
+        Grande Inauguração da
+
+    </p>
+
+    <h3>
+
+        CATEDRAL DA FÉ
+
+    </h3>
+
+    <span>
+
+        Campina Grande - PB
+
+    </span>
+
+    <div class="texto">
+
+        Sua presença será uma honra para nós.
+
+        <br><br>
+
+    </div>
+
+    <form id="formulario">
+
+        <div class="campo">
+
+            <label>Nome</label>
+
+            <input
+                type="text"
+                id="nome"
+                required>
+
+        </div>
+
+        <div class="campo">
+
+            <label>Convidados</label>
+
+            <textarea
+                id="convidados"
+                rows="5"
+                placeholder="Digite o nome dos convidados separados por vírgula"></textarea>
+
+        </div>
+
+        <button type="submit">
+
+            ✔ CONFIRMAR PRESENÇA
+
+        </button>
+
+    </form>
+
+    <div id="mensagem"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

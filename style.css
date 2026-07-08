@@ -1,0 +1,442 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Montserrat',sans-serif;
+
+    background:#13294B;
+
+    overflow-x:hidden;
+
+    color:white;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+    position:relative;
+
+}
+
+/* Fundo granulado */
+
+body::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+    radial-gradient(circle, rgba(212,175,55,.30) 1px, transparent 1px);
+
+    background-size:16px 16px;
+
+    opacity:.08;
+
+    pointer-events:none;
+
+}
+
+/* Linhas douradas superiores */
+
+.background-top{
+
+    position:absolute;
+
+    top:0;
+
+    right:0;
+
+    width:700px;
+
+    height:350px;
+
+    border-top:3px solid #D4AF37;
+
+    border-left:3px solid transparent;
+
+    border-radius:0 0 0 100%;
+
+    opacity:.35;
+
+}
+
+.background-top::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:25px;
+
+    right:25px;
+
+    width:600px;
+
+    height:300px;
+
+    border-top:1px solid #D4AF37;
+
+    border-left:1px solid transparent;
+
+    border-radius:0 0 0 100%;
+
+}
+
+.background-top::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:50px;
+
+    right:50px;
+
+    width:520px;
+
+    height:250px;
+
+    border-top:1px solid rgba(212,175,55,.5);
+
+    border-left:1px solid transparent;
+
+    border-radius:0 0 0 100%;
+
+}
+
+/* Inferior */
+
+.background-bottom{
+
+    position:absolute;
+
+    bottom:0;
+
+    left:0;
+
+    width:500px;
+
+    height:220px;
+
+    border-bottom:2px solid rgba(212,175,55,.30);
+
+    border-right:2px solid transparent;
+
+    border-radius:0 100% 0 0;
+
+}
+
+/* Card */
+
+.container{
+
+    width:100%;
+
+    max-width:700px;
+
+    background:rgba(16,35,70,.94);
+
+    border:1px solid rgba(212,175,55,.35);
+
+    border-radius:20px;
+
+    padding:50px;
+
+    text-align:center;
+
+    position:relative;
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:
+
+    0 0 45px rgba(0,0,0,.45);
+
+}
+
+/* Logo */
+
+.logo img{
+
+    width:85px;
+
+    margin-bottom:25px;
+
+}
+
+/* Título */
+
+.titulo h1{
+
+    font-family:'Bebas Neue',sans-serif;
+
+    color:#D4AF37;
+
+    font-size:60px;
+
+    letter-spacing:4px;
+
+    font-weight:400;
+
+}
+
+.titulo h2{
+
+    font-family:'Bebas Neue',sans-serif;
+
+    color:#ffffff;
+
+    letter-spacing:10px;
+
+    font-size:30px;
+
+    font-weight:400;
+
+    margin-top:-8px;
+
+}
+
+/* Linha */
+
+.linha{
+
+    width:220px;
+
+    height:2px;
+
+    margin:25px auto;
+
+    background:linear-gradient(to right,
+    transparent,
+    #D4AF37,
+    transparent);
+
+    position:relative;
+
+}
+
+.linha::after{
+
+    content:"◆";
+
+    color:#D4AF37;
+
+    position:absolute;
+
+    left:50%;
+
+    top:-13px;
+
+    transform:translateX(-50%);
+
+    background:#13294B;
+
+    padding:0 10px;
+
+    font-size:18px;
+
+}
+
+/* Subtítulos */
+
+.subtitulo{
+
+    color:#E9D39A;
+
+    margin-bottom:8px;
+
+    font-size:17px;
+
+}
+
+h3{
+
+    font-family:'Bebas Neue',sans-serif;
+
+    color:#D4AF37;
+
+    font-size:46px;
+
+    letter-spacing:3px;
+
+    font-weight:400;
+
+}
+
+span{
+
+    display:block;
+
+    margin-top:5px;
+
+    color:white;
+
+    letter-spacing:2px;
+
+    font-size:15px;
+
+}
+
+/* Texto */
+
+.texto{
+
+    margin:35px 0;
+
+    line-height:1.8;
+
+    color:#efefef;
+
+    font-size:15px;
+
+}
+
+/* Campos */
+
+.campo{
+
+    margin-bottom:25px;
+
+    text-align:left;
+
+}
+
+label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    color:#D4AF37;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+}
+
+input,textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    border:1px solid rgba(212,175,55,.45);
+
+    background:#0d2140;
+
+    color:white;
+
+    font-size:15px;
+
+    font-family:Montserrat;
+
+    transition:.3s;
+
+}
+
+input:focus,
+textarea:focus{
+
+    outline:none;
+
+    border-color:#D4AF37;
+
+    box-shadow:0 0 15px rgba(212,175,55,.35);
+
+}
+
+/* Botão */
+
+button{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(90deg,#B8860B,#D4AF37,#E7C766);
+
+    color:#13294B;
+
+    font-family:'Bebas Neue';
+
+    font-size:24px;
+
+    letter-spacing:2px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 12px 30px rgba(212,175,55,.35);
+
+}
+
+/* Mensagem */
+
+#mensagem{
+
+    margin-top:30px;
+
+    font-size:18px;
+
+    color:#D4AF37;
+
+    font-weight:bold;
+
+}
+
+/* Celular */
+
+@media(max-width:700px){
+
+.container{
+
+padding:30px;
+
+}
+
+.titulo h1{
+
+font-size:46px;
+
+}
+
+h3{
+
+font-size:34px;
+
+}
+
+button{
+
+font-size:20px;
+
+}
+
+}
