@@ -153,7 +153,7 @@ body::before{
 
     border-radius:18px;
 
-    padding:22px;
+    padding:20px;
 
     text-align:center;
 
@@ -300,9 +300,9 @@ span{
 
 .texto{
 
-    margin:18px 0;
+    margin:15px 0;
 
-    line-height:1.4;
+    line-height:1.35;
 
     color:#efefef;
 
@@ -310,11 +310,29 @@ span{
 
 }
 
+/* Texto informativo do telefone */
+
+.info-telefone{
+
+    margin-top:4px;
+
+    margin-bottom:8px;
+
+    color:#E9D39A;
+
+    font-size:12px;
+
+    line-height:1.45;
+
+    font-weight:400;
+
+}
+
 /* Campos */
 
 .campo{
 
-    margin-bottom:15px;
+    margin-bottom:13px;
 
     text-align:left;
 
@@ -433,7 +451,7 @@ body{
 
     max-width:380px;
 
-    padding:18px;
+    padding:16px;
 
 }
 
@@ -465,13 +483,13 @@ h3{
 
 .texto{
 
-    margin:15px 0;
+    margin:12px 0;
 
 }
 
 button{
 
-    font-size:18px;
+    font-size:13px;
 
     padding:12px;
 
@@ -480,6 +498,29 @@ button{
 textarea{
 
     min-height:75px;
+
+}
+
+.info-telefone{
+
+    font-size:11px;
+
+    line-height:1.4;
+
+}
+
+label{
+
+    font-size:13px;
+
+}
+
+input,
+textarea{
+
+    padding:10px 12px;
+
+    font-size:13px;
 
 }
 
